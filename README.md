@@ -1,24 +1,29 @@
-# 🔮 AWS-AUTOMATION
+# 🪐 AWS-AUTOMATION
 
 An advanced automation system for AWS services, featuring bots and scripts for various tasks with notification support.
 
-Created and maintained by [@khadafigans](https://github.com/khadafigans)
+Created and maintained by [Bob Marley](https://github.com/khadafigans)
+
+---
 
 ## 🚀 Features
 
-* ✅ Automated AWS resource management and monitoring
-* ✅ Notification integration via email and Telegram
-* ✅ Modular scripts organized in folders for specific functionalities
-* ✅ Easy configuration through script variables
-* ✅ Support for AWS SDK integration
+- ✅ Automated AWS resource management and monitoring  
+- ✅ Notification integration via email and Telegram  
+- ✅ Modular scripts organized in folders for specific functionalities  
+- ✅ Easy configuration through script variables  
+- ✅ Support for AWS SDK integration  
+
+---
 
 ## 📦 Requirements
 
 Before you get started, ensure you have the following installed:
 
-* Python 3.8 or higher
-* AWS CLI (for configuring credentials: run `aws configure`)
-* Pip (Python package manager)
+- Python 3.8 or higher
+- AWS CLI (for configuring credentials: run `aws configure`)
+- Pip (Python package manager)
+
 
 ## ⚙️ Installation
 
@@ -53,10 +58,6 @@ Note: Additional dependencies may be required based on specific scripts. Check e
 
 Organize your data in the following folder structure:
 
-## 📁 Configuration
-
-Organize your data in the following folder structure:
-
 ```
 AWS-AUTOMATION/
 │
@@ -85,40 +86,84 @@ AWS-AUTOMATION/
     └── gencek7.py # Python script for generating domain/IP
 ```
 
-For other potential folders (e.g., if the repo includes additional automation like instance creation, backups, etc.), review their contents similarly. Each script typically requires AWS credentials and may have custom setups.
+## 🚀 Usage How to Run Each Script
 
-### Specific Configuration for BOT_AWS/BOT_AWS.py
+### GENIP
 
-Open `BOT_AWS/BOT_AWS.py` in a text editor and configure the following variables at the top of the file:
+1. Open the `GENIP` folder.
+2. Edit `config.json` as needed for your AWS IP/domain generation.
+3. To run the generator:
+   - On Linux/macOS:
+     ```bash
+     python3 gencek7.py
+     ```
+   - On Windows:
+     Double-click or run:
+     ```cmd
+     gas.cmd
+     ```
 
+---
+
+### BOT_AWS
+
+1. Open the `BOT_AWS` folder.
+2. **Configure notifications (optional):**
+   - Open `BOT_AWS.py` in a text editor.
+   - Set your email and Telegram bot credentials at the top of the file:
+   ```python
+   EMAIL_SENDER = "your_email@gmail.com"
+   RECIPIENT_EMAIL = "RECIPIENT_EMAIL"
+   TELEGRAM_BOT_TOKEN = "your_telegram_bot_token"
+   TELEGRAM_CHAT_ID = "your_telegram_chat_id"
+
+   # AWS default username and password
+   iam_user = 'AdminEc2CNSL'
+   iam_password = 'Root1337'
+   ```
+3. To run the main script:
+   - On Linux/macOS:
+     ```bash
+     python3 BOT_AWS.py
+     ```
+   - On Windows:
+     Double-click or run:
+     ```cmd
+     run.cmd
+     ```
+4. Output and results will be saved in `result.txt` and other text files in the folder.
+
+---
+
+### AWSCEK
+
+1. Open the `AWSCEK` folder.
+2. **Install Node.js dependencies** (if not already done):
+   ```bash
+   npm install
+   ```
+3. **To run the AWS key/SES console script:**
+  ```bash
+  node aws.js
+  ```
+4. **To run the region removal script:**
+  ```bash
+  python rm_region.py # can be python3 based on what you installed
+  ```
+5. **Output and results will be saved in result.txt and other files in the folder.**
+
+📧 Contact :
+------
+You Want Ask About All My Tools Private Add Me On : 
 ```
-email = 'your_email@example.com'  # Email address for sending notifications
-telegram_bot = 'your_telegram_bot_token'  # Telegram bot API token (obtain from BotFather)
-telegram_chat_id = 'your_chat_id'  # Telegram chat ID to receive notifications
+[+] Telegram : @marleyybob123
+[+] Telegram Channel : https://t.me/BMARLEYTOOLS
 ```
+# This script is public and not for sale!
 
-Additionally:
-- Ensure AWS credentials are configured (access key, secret key, region) via AWS CLI (`aws configure`) or environment variables.
-- If the script uses other services, set any required API keys or parameters in the code.
+*Join telegram channel for more Free Tools
 
-For how to use: The script likely performs AWS tasks (e.g., monitoring resources, automating deployments) and sends alerts via email or Telegram on events.
+           This script was made for an educational purposes only, any illegal activites will have nothing to do with me
 
-Review the script code for exact functionality, inputs, or command-line arguments.
-
-## 🚀 Usage
-
-To run a script, navigate to its folder and execute it with Python.
-
-For example, for the BOT_AWS script:
-
-```
-cd BOT_AWS
-python BOT_AWS.py ips.txt
-python BOT_AWS.py domains.txt
-```
-
-- Ensure all dependencies are installed and configurations are set before running.
-- Scripts may require running in a virtual environment (e.g., using `venv`) for isolation.
-- If a script needs additional setup (e.g., environment variables), it will be commented in the code.
-
-Repeat for other folders/scripts in the repository. Always test in a safe environment to avoid unintended AWS changes.
+<br>©2025 Bob Marley
+</html>
