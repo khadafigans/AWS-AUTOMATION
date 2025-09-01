@@ -51,10 +51,39 @@ Note: Additional dependencies may be required based on specific scripts. Check e
 
 ## 📁 Configuration
 
-The repository is organized into folders, each containing specific automation scripts. Check all folders and files for their purpose:
+Organize your data in the following folder structure:
 
-- **BOT_AWS/**: Contains the main AWS bot script.
-  - `BOT_AWS.py`: The primary Python script for AWS automation with notifications.
+## 📁 Configuration
+
+Organize your data in the following folder structure:
+
+```
+AWS-AUTOMATION/
+│
+├── BOT_AWS/ # AWS Bot notifier
+│   ├── BOT_AWS.py # Python bot script for AWS alerts
+│   ├── console.txt # Output Console Created
+│   ├── EC2.txt # Output EC2 Instances inside console
+│   ├── env.txt # Output .env if available
+│   ├── json.txt # Output Web
+│   ├── result.txt # AWS Key Results
+│   ├── run.cmd # Windows batch shortcut
+│   └── ses.txt # Output SES Available
+│
+├── AWSCEK/ # AWS Key checker (Node.js & Python mix)
+│   ├── aws.js # Main AWS key checking script (Node.js)
+│   ├── aws_key.txt # Store AWS keys here (format: KEY:SECRET)
+│   ├── package.json # Node.js dependencies
+│   ├── package-lock.json
+│   ├── result.txt # Output of AWS checks
+│   └── rm_region.py # Python helper to handle AWS region cleanup
+│
+└── GENIP/ # IP/domain generation helper
+    ├── hasil/ # Output Folder
+    ├── config.json # Config for domain/IP generation
+    ├── gas.cmd # Windows batch shortcut
+    └── gencek7.py # Python script for generating domain/IP
+```
 
 For other potential folders (e.g., if the repo includes additional automation like instance creation, backups, etc.), review their contents similarly. Each script typically requires AWS credentials and may have custom setups.
 
@@ -84,7 +113,8 @@ For example, for the BOT_AWS script:
 
 ```
 cd BOT_AWS
-python BOT_AWS.py
+python BOT_AWS.py ips.txt
+python BOT_AWS.py domains.txt
 ```
 
 - Ensure all dependencies are installed and configurations are set before running.
