@@ -124,7 +124,9 @@ AWS-AUTOMATION/
 3. To run the main script:
    - On Linux/macOS:
      ```bash
-     python3 BOT_AWS.py
+     python3 BOT_AWS.py domains.txt
+                 Or
+     python3 BOT_AWS.py ips.txt
      ```
    - On Windows:
      Double-click or run:
