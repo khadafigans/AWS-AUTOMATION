@@ -2,7 +2,7 @@
 
 An advanced automation system for AWS services, featuring bots and scripts for various tasks with notification support.
 
-Created and maintained by [Bob Marley](https://github.com/khadafigans)
+maintained by [Bob Marley](https://github.com/khadafigans)
 
 ---
 
